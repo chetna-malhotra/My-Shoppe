@@ -23,7 +23,7 @@ const removeFromCartHandler=(id)=>{
 dispatch(removeFromCart(id))
 }
 const checkouthandler=()=>{
-
+    history.push('/login?redirect=shipping')
 }
     return (
         <Row>
