@@ -1,13 +1,14 @@
 import mongoose from 'mongoose'
 
 
-const orderSchema=mongoose.Schema({
+const orderSchema=mongoose.Schema(
+    {
     user:{
         type:mongoose.Schema.Types.ObjectId,
         required:true,
         ref:'User'
     },
-    orderItmes:[
+    orderItems:[
         {
             name:{type:String,required:true},
             qty:{type:Number,required:true},
@@ -57,7 +58,8 @@ const orderSchema=mongoose.Schema({
          default:false
      },
      paidAt:{
-         type:Date
+         type:Date,
+         default:new Date
      },
      isDelivered:{
         type:Boolean,
@@ -65,7 +67,8 @@ const orderSchema=mongoose.Schema({
         default:false
      },
      deliveredAt:{
-        type:Date
+        type:Date,
+        default:new Date
     }
 
 },{timestamps:true})

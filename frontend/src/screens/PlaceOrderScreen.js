@@ -73,7 +73,7 @@ useEffect(() => {
                                         </Link>
                                     </Col>
                                     <Col md={5}>
-                                        {item.qty}*${item.price}=${item.qty*item.price}
+                                        {item.qty}*{item.price}INR={item.qty*item.price}INR
                                     </Col>
                                 </Row>
                             </ListGroup.Item>
@@ -93,25 +93,25 @@ useEffect(() => {
                        <ListGroup.Item>
                            <Row>
                                <Col>Items</Col>
-                               <Col>${cart.itemsPrice}</Col>
+                               <Col>{cart.itemsPrice}INR</Col>
                            </Row>
                        </ListGroup.Item>
                        <ListGroup.Item>
                            <Row>
                                <Col>Shipping</Col>
-                               <Col>${cart.shippingPrice}</Col>
+                               <Col>{cart.shippingPrice}INR</Col>
                            </Row>
                        </ListGroup.Item>
                        <ListGroup.Item>
                            <Row>
                                <Col>Tax</Col>
-                               <Col>${cart.taxPrice}</Col>
+                               <Col>{cart.taxPrice}INR</Col>
                            </Row>
                        </ListGroup.Item>
                        <ListGroup.Item>
                            <Row>
                                <Col>Total Price</Col>
-                               <Col>${cart.totalPrice}</Col>
+                               <Col>{cart.totalPrice}INR</Col>
                            </Row>
                        </ListGroup.Item>
                        <ListGroup.Item>
